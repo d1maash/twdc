@@ -1,0 +1,564 @@
+Uri: https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\css-1
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/sourcesanspro/v22/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\s\sourcesanspro\v22\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\s\sourcesanspro\v22\6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\s\sourcesanspro\v22\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\s\sourcesanspro\v22\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf
+Content Type: font/ttf
+
+Uri: https://wdc.kz/admin/users/login
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\admin\users\login.html
+Content Type: text/html
+
+Uri: https://wdc.kz/css/admin/adminlte.min.css
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\css\admin\adminlte.min.css
+Content Type: text/css
+
+Uri: https://wdc.kz/css/admin/fontawesome-free/css/all.min.css
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\css\admin\fontawesome-free\css\all.min.css
+Content Type: text/css
+
+Uri: https://wdc.kz/css/admin/ionicons.min.css
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\css\admin\ionicons.min.css
+Content Type: text/css
+
+Uri: https://wdc.kz/css/admin/overlayScrollbars/css/OverlayScrollbars.min.css
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\css\admin\overlayScrollbars\css\OverlayScrollbars.min.css
+Content Type: text/css
+
+Uri: https://wdc.kz/favicon.ico
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://wdc.kz/js/admin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\admin\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css
+Content Type: text/css
+
+Uri: https://wdc.kz/js/ckeditor/ckeditor.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\ckeditor\ckeditor.js
+Content Type: application/javascript
+
+: https://wdc.kz/en/news/spetstekhnika_v_lizing_drayiv
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\en\news\spetstekhnika_v_lizing_drayiv.html
+Content Type: text/html
+
+Uri: https://wdc.kz/en/news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\en\news\v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html
+Content Type: text/html
+
+Uri: https://wdc.kz/en/news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\en\news\zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html
+Content Type: text/html
+
+Uri: https://wdc.kz/en/partners
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\en\partners.html
+Content Type: text/html
+
+Uri: https://wdc.kz/en/projects
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\en\projects.html
+Content Type: text/html
+
+Uri: https://wdc.kz/equipments
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\equipments.html
+Content Type: text/html
+
+Uri: https://wdc.kz/fonts/OpenSans-Bold.eot
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Bold.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://wdc.kz/fonts/OpenSans-Bold.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Bold.ttf
+Content Type: application/font-sfnt
+
+Uri: https://wdc.kz/fonts/OpenSans-Bold.woff
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Bold.woff
+Content Type: application/font-woff
+
+Uri: https://wdc.kz/fonts/OpenSans-Regular.eot
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Regular.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://wdc.kz/fonts/OpenSans-Regular.ttf
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Regular.ttf
+Content Type: application/font-sfnt
+
+Uri: https://wdc.kz/fonts/OpenSans-Regular.woff
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\fonts\OpenSans-Regular.woff
+Content Type: application/font-woff
+
+Uri: https://wdc.kz/img/arrow_up.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\arrow_up.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/arrow_up_orange.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\arrow_up_orange.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/bg_1.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\bg_1.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/bg_2.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\bg_2.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/blog_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\blog_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/build.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\build.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/contact_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\contact_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/done_icon.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\done_icon.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/facebook.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\facebook.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/facebook_yellow.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\facebook_yellow.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/facebook_yellow_2.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\facebook_yellow_2.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/favicon.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\favicon.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/in.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\in.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/insta.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\insta.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/insta_yellow.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\insta_yellow.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/insta_yellow_3.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\insta_yellow_3.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/inzh.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\inzh.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/in_yellow.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\in_yellow.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/in_yellow_2.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\in_yellow_2.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/kamaz.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\kamaz.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/left.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\left.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/left_arrow.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\left_arrow.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/logo.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\logo.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/logo_footer.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\logo_footer.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/main_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\main_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/mission_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\mission_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/news/04a3c4b4045fcf3884b54bc7d7d84313.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\news\04a3c4b4045fcf3884b54bc7d7d84313.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/news/3e4b12cd22986972d244bad42bcc15a8.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\news\3e4b12cd22986972d244bad42bcc15a8.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/news/93e8a25543533e6c8bae01309274161e.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\news\93e8a25543533e6c8bae01309274161e.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/news/9b3da11cacfc69753b827e1fe1810711.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\news\9b3da11cacfc69753b827e1fe1810711.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/pages/4ca4f91a1aeb74c8851f369b571d7b11.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\pages\4ca4f91a1aeb74c8851f369b571d7b11.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/pages/4f0bcf2792af2d30a33650456bf096c8.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\pages\4f0bcf2792af2d30a33650456bf096c8.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/02c786a75ce2b04250e254869a397582.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\02c786a75ce2b04250e254869a397582.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/3192cc1f60402e3ae95823ea97e57c1c.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\3192cc1f60402e3ae95823ea97e57c1c.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/47b62f5152306401cfef930084e87f37.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\47b62f5152306401cfef930084e87f37.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/4e7f5d34380ef8321fefae7aa370e5aa.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\4e7f5d34380ef8321fefae7aa370e5aa.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/69afcfc1503df1d6fed14b90f5a34885.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\69afcfc1503df1d6fed14b90f5a34885.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/72f76e64475354f05467908f5aebe05a.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\72f76e64475354f05467908f5aebe05a.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/73ff6e7aa9de55ace7b16d62533c0f11.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\73ff6e7aa9de55ace7b16d62533c0f11.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/c55eb0694b5d6f4507281da170a6938f.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\c55eb0694b5d6f4507281da170a6938f.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/c62f8dc6695e7053ba4719516695c071.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\c62f8dc6695e7053ba4719516695c071.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/ddc7735c4dfd82d9eb566a5c2eb60a8d.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\ddc7735c4dfd82d9eb566a5c2eb60a8d.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/partners/fe5d4e91f405b9e06b06a519fdbd6e19.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\partners\fe5d4e91f405b9e06b06a519fdbd6e19.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/projects/0b52c0787da46fc736bb90ffdbfb9944.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\projects\0b52c0787da46fc736bb90ffdbfb9944.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/projects/3c31954fb31fe516d95f032fd46ed745.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\projects\3c31954fb31fe516d95f032fd46ed745.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/projects/560b2b734084d8c1acf18641d98dcfd3.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\projects\560b2b734084d8c1acf18641d98dcfd3.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/projects/8189473af87492aeff6861896ac2833f.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\projects\8189473af87492aeff6861896ac2833f.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/project_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\project_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/right.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\right.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/right_arrow.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\right_arrow.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/scrool.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\scrool.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/services/0bc470de699a4788317cc124eb636df7.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\0bc470de699a4788317cc124eb636df7.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/2c2c81e4e7127bccf290b9c44e921d10.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\2c2c81e4e7127bccf290b9c44e921d10.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/2ecc17140bea9b29f57f20c2292b79d3.jpeg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\2ecc17140bea9b29f57f20c2292b79d3.jpeg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/30072aab169615c9c9ab0e23c0e42228.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\30072aab169615c9c9ab0e23c0e42228.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/348104a421fb7597c9508b1ee2ac91f7.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\348104a421fb7597c9508b1ee2ac91f7.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/39d215f03fde2e6f7472a784a912f79e.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\39d215f03fde2e6f7472a784a912f79e.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/54e479f9e39dd1ae3c9deec1b1878b81.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\54e479f9e39dd1ae3c9deec1b1878b81.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/5a2db66b460779c2791ef4367c169a07.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\5a2db66b460779c2791ef4367c169a07.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/5d90703ba869765edca810fefa5af177.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\5d90703ba869765edca810fefa5af177.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/6c1e92285f2c65248638519c56aeaa4d.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\6c1e92285f2c65248638519c56aeaa4d.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/769f1fbb777acfae2c110cddda9d236e.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\769f1fbb777acfae2c110cddda9d236e.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/79fe309365cd7cc4479447ce1baa994b.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\79fe309365cd7cc4479447ce1baa994b.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/82b57f4d1bb9d6f2be4c465cc620e364.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\82b57f4d1bb9d6f2be4c465cc620e364.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/bb91097576ba900e804e3743399caef6.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\bb91097576ba900e804e3743399caef6.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/be2a13824b860a95277f1de5f904af61.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\be2a13824b860a95277f1de5f904af61.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/c21972b4db00a667d32533d55a34ff58.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\c21972b4db00a667d32533d55a34ff58.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/ca028ee70567c6355e1624283eba0733.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\ca028ee70567c6355e1624283eba0733.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/cb7261b814283fe01eb898729175f7eb.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\cb7261b814283fe01eb898729175f7eb.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/ce8eefae52227a0b682a766b1065440e.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\ce8eefae52227a0b682a766b1065440e.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/d76b1ef45cdd6a8ef6d6cc19a59a80d1.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\d76b1ef45cdd6a8ef6d6cc19a59a80d1.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/services/eaab9b343ec30fcd8139085895b099e3.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\services\eaab9b343ec30fcd8139085895b099e3.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/serv_2_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\serv_2_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/serv_3_bg.png
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\serv_3_bg.png
+Content Type: image/png
+
+Uri: https://wdc.kz/img/slide1.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\slide1.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/slide2.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\slide2.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/slide3.jpg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\slide3.jpg
+Content Type: image/jpeg
+
+Uri: https://wdc.kz/img/top.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\top.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/img/warning.svg
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\img\warning.svg
+Content Type: image/svg+xml
+
+Uri: https://wdc.kz/js/index.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\index.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/js/jquery-3.0.0.min.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\jquery-3.0.0.min.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/js/jquery.animateNumber.min.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\jquery.animateNumber.min.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/js/jquery.fancybox.min.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\jquery.fancybox.min.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/js/script.js?v=1.1152
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\script.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/js/slick.min.js
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\js\slick.min.js
+Content Type: application/javascript
+
+Uri: https://wdc.kz/manufacturers
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\manufacturers.html
+Content Type: text/html
+
+Uri: https://wdc.kz/missions
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\missions.html
+Content Type: text/html
+
+Uri: https://wdc.kz/news
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\news.html
+Content Type: text/html
+
+Uri: https://wdc.kz/news/spetstekhnika_v_lizing_drayiv
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\news\spetstekhnika_v_lizing_drayiv.html
+Content Type: text/html
+
+Uri: https://wdc.kz/news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\news\v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html
+Content Type: text/html
+
+Uri: https://wdc.kz/news/yuzhnokoreyiskaya_korporatsiya_doosan_obyavila_novogo_distribyutora_v_rk
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\news\yuzhnokoreyiskaya_korporatsiya_doosan_obyavila_novogo_distribyutora_v_rk.html
+Content Type: text/html
+
+Uri: https://wdc.kz/news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\news\zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html
+Content Type: text/html
+
+Uri: https://wdc.kz/partners
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\partners.html
+Content Type: text/html
+
+Uri: https://wdc.kz/projects
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\projects.html
+Content Type: text/html
+
+Uri: https://wdc.kz/projects/catro_project
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\projects\catro_project.html
+Content Type: text/html
+
+Uri: https://wdc.kz/projects/integrated_operation_control_centre_iocc_mcc
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\projects\integrated_operation_control_centre_iocc_mcc.html
+Content Type: text/html
+
+Uri: https://wdc.kz/projects/tco_fgp_psn_kazstroy
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\projects\tco_fgp_psn_kazstroy.html
+Content Type: text/html
+
+Uri: https://wdc.kz/projects/testovyyi
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\projects\testovyyi.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\index.htm
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/about
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\about.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/construction
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\construction.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/contacts
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\contacts.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/equipments
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\equipments.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/manufacturers
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\manufacturers.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/missions
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\missions.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/news
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\news.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/news/spetstekhnika_v_lizing_drayiv
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\news\spetstekhnika_v_lizing_drayiv.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\news\v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/news/yuzhnokoreyiskaya_korporatsiya_doosan_obyavila_novogo_distribyutora_v_rk
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\news\yuzhnokoreyiskaya_korporatsiya_doosan_obyavila_novogo_distribyutora_v_rk.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\news\zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/partners
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\partners.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/projects
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\projects.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/projects/catro_project
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\projects\catro_project.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/projects/integrated_operation_control_centre_iocc_mcc
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\projects\integrated_operation_control_centre_iocc_mcc.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/projects/tco_fgp_psn_kazstroy
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\projects\tco_fgp_psn_kazstroy.html
+Content Type: text/html
+
+Uri: https://wdc.kz/ru/projects/testovyyi
+File Name: C:\Users\dimas\Рабочий стол\Coding\web-copy\wdc.kz\ru\projects\testovyyi.html
+Content Type: text/html
+

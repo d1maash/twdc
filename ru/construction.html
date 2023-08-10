@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css?v=1.1495542">
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <title>WDC.kz</title>
+    <script src="../createjs-2015.11.26.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+    function init() {
+        canvas = document.getElementById("canvas");
+        anim_container = document.getElementById("animation_container");
+        dom_overlay_container = document.getElementById("dom_overlay_container");
+        var comp=AdobeAn.getComposition("57343C760F851741922B85D067142B31");
+        var lib=comp.getLibrary();
+        handleComplete({},comp);
+    }
+    function handleComplete(evt,comp) {
+        //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+        var lib=comp.getLibrary();
+        var ss=comp.getSpriteSheet();
+        exportRoot = new lib.wdc();
+        stage = new lib.Stage(canvas);  
+        //Registers the "tick" event listener.
+        fnStartAnimation = function() {
+            stage.addChild(exportRoot);
+            createjs.Ticker.setFPS(lib.properties.fps);
+            createjs.Ticker.addEventListener("tick", stage)
+            stage.addEventListener("tick", handleTick)
+            function getProjectionMatrix(container, totalDepth) {
+                var focalLength = 528.25;
+                var projectionCenter = { x : lib.properties.width/2, y : lib.properties.height/2 };
+                var scale = (totalDepth + focalLength)/focalLength;
+                var scaleMat = new createjs.Matrix2D;
+                scaleMat.a = 1/scale;
+                scaleMat.d = 1/scale;
+                var projMat = new createjs.Matrix2D;
+                projMat.tx = -projectionCenter.x;
+                projMat.ty = -projectionCenter.y;
+                projMat = projMat.prependMatrix(scaleMat);
+                projMat.tx += projectionCenter.x;
+                projMat.ty += projectionCenter.y;
+                return projMat;
+            }
+            function handleTick(event) {
+                var cameraInstance = exportRoot.___camera___instance;
+                if(cameraInstance !== undefined && cameraInstance.pinToObject !== undefined)
+                {
+                    cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
+                    cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
+                    if(cameraInstance.pinToObject.parent !== undefined && cameraInstance.pinToObject.parent.depth !== undefined)
+                    cameraInstance.depth = cameraInstance.pinToObject.parent.depth + cameraInstance.pinToObject.pinOffsetZ;
+                }
+                applyLayerZDepth(exportRoot);
+            }
+            function applyLayerZDepth(parent)
+            {
+                var cameraInstance = parent.___camera___instance;
+                var focalLength = 528.25;
+                var projectionCenter = { 'x' : 0, 'y' : 0};
+                if(parent === exportRoot)
+                {
+                    var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
+                    projectionCenter.x = stageCenter.x;
+                    projectionCenter.y = stageCenter.y;
+                }
+                for(child in parent.children)
+                {
+                    var layerObj = parent.children[child];
+                    if(layerObj == cameraInstance)
+                        continue;
+                    applyLayerZDepth(layerObj, cameraInstance);
+                    if(layerObj.layerDepth === undefined)
+                        continue;
+                    if(layerObj.currentFrame != layerObj.parent.currentFrame)
+                    {
+                        layerObj.gotoAndPlay(layerObj.parent.currentFrame);
+                    }
+                    var matToApply = new createjs.Matrix2D;
+                    var cameraMat = new createjs.Matrix2D;
+                    var totalDepth = layerObj.layerDepth ? layerObj.layerDepth : 0;
+                    var cameraDepth = 0;
+                    if(cameraInstance && !layerObj.isAttachedToCamera)
+                    {
+                        var mat = cameraInstance.getMatrix();
+                        mat.tx -= projectionCenter.x;
+                        mat.ty -= projectionCenter.y;
+                        cameraMat = mat.invert();
+                        cameraMat.prependTransform(projectionCenter.x, projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                        cameraMat.appendTransform(-projectionCenter.x, -projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                        if(cameraInstance.depth)
+                            cameraDepth = cameraInstance.depth;
+                    }
+                    if(layerObj.depth)
+                    {
+                        totalDepth = layerObj.depth;
+                    }
+                    //Offset by camera depth
+                    totalDepth -= cameraDepth;
+                    if(totalDepth < -focalLength)
+                    {
+                        matToApply.a = 0;
+                        matToApply.d = 0;
+                    }
+                    else
+                    {
+                        if(layerObj.layerDepth)
+                        {
+                            var sizeLockedMat = getProjectionMatrix(parent, layerObj.layerDepth);
+                            if(sizeLockedMat)
+                            {
+                                sizeLockedMat.invert();
+                                matToApply.prependMatrix(sizeLockedMat);
+                            }
+                        }
+                        matToApply.prependMatrix(cameraMat);
+                        var projMat = getProjectionMatrix(parent, totalDepth);
+                        if(projMat)
+                        {
+                            matToApply.prependMatrix(projMat);
+                        }
+                    }
+                    layerObj.transformMatrix = matToApply;
+                }
+            }
+        }       
+        //Code to support hidpi screens and responsive scaling.
+        function makeResponsive(isResp, respDim, isScale, scaleType) {      
+            var lastW, lastH, lastS=1;      
+            window.addEventListener('resize', resizeCanvas);        
+            resizeCanvas();     
+            function resizeCanvas() {           
+                var w = lib.properties.width, h = lib.properties.height;            
+                var iw = window.innerWidth, ih=window.innerHeight;          
+                var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;          
+                if(isResp) {                
+                    if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+                        sRatio = lastS;                
+                    }               
+                    else if(!isScale) {                 
+                        if(iw<w || ih<h)                        
+                            sRatio = Math.min(xRatio, yRatio);              
+                    }               
+                    else if(scaleType==1) {                 
+                        sRatio = Math.min(xRatio, yRatio);              
+                    }               
+                    else if(scaleType==2) {                 
+                        sRatio = Math.max(xRatio, yRatio);              
+                    }           
+                }           
+                canvas.width = w*pRatio*sRatio;         
+                canvas.height = h*pRatio*sRatio;
+                canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';               
+                canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+                stage.scaleX = pRatio*sRatio;           
+                stage.scaleY = pRatio*sRatio;           
+                lastW = iw; lastH = ih; lastS = sRatio;            
+                stage.tickOnUpdate = false;            
+                stage.update();            
+                stage.tickOnUpdate = true;     
+                
+                logoWidth();
+            }
+        }
+        makeResponsive(false,'both',false,1);   
+        AdobeAn.compositionLoaded(lib.properties.id);
+        fnStartAnimation();
+    }
+    </script>
+</head>
+    <body class="ru" onload="init();">
+        <div class="alert  ">
+              <div class="container">
+                                                                                                     
+                 <!-- <div class="my-alert__close"></div> -->
+                 <a class="alert_close orange_btn" href="javascript:;">OK</a>
+              </div>
+            </div> 
+
+        <!-- <div class="popup" id="alert_popup">
+            <div class="alert ">
+                <div class="container">
+                                                                                                    <div class="my-alert__close"></div>
+                </div>
+            </div> 
+        </div> -->
+        <header id="up" class="header">     
+            <div class="head_container">       
+                <div class="container">
+                    <div class="header_bottom">
+                        <style>
+                        #animation_container {
+                            position:absolute;
+                            margin:auto;
+                            left:0;right:0;
+                            top:0;bottom:0;
+                        }
+                        </style>
+                        <a class="logo" style="position:relative" id="logo_main" href="../index.htm">
+                            <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:260px; height:64px">
+                                <canvas id="canvas" width="260" height="64" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:260px; height:64px; position: absolute; left: 0px; top: 0px; display: block;">
+                                </div>                                 
+                            </div>
+                            <img src="../img/logo.svg" alt="logo">
+                        </a>
+                        <div class="header_right">
+                            <div class="header_number dn">
+                                <p class="header_number_name">Телефон</p>
+                                <p>  <a href="tel:+77122755750">8 (7122) 755-750</a></p>
+                            </div>
+                            <div class="header_number dn">
+                                <p class="header_number_name">Эл.почта</p>
+                                <p> <a href="mailto:info@wdc.kz">info@wdc.kz</a></p>
+                            </div>
+                            <div class="header_number">
+                                <p class="header_number_name">Язык</p>
+                                <div class="lang_other">
+                                    <a href="../en/construction.html" class="lang ">EN</a> <span>/</span>
+                                    <a href="construction.html" class="lang active">RU</a>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="mob_menu active">
+                            <div class="menu_btn">
+                                <span class="menu_btn_span menu1"></span>
+                                <span class="menu_btn_span menu2"></span>
+                                <span class="menu_btn_span menu3"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_subbottom">
+                <div class="container">
+                <ul class="header_ul">
+                    <li><a href="index.htm" class="header_a">Главная</a></li>
+                    <li><a href="about.html" class="header_a">О компании</a></li>
+                    <li class="header_li"><a href="javascript:;" class="header_a  menu_const">Услуги<div class="menu_arrow"></div></a>
+                        <div class="sub_menu">
+                            <div class="sub_menu_list">
+                                <a href="construction.html" class="sub_link">Общестроительные работы</a>
+                                <a href="equipments.html" class="sub_link">Аренда и поставка спецтехники</a>
+                                <a href="manufacturers.html" class="sub_link">Изготовление офисных и жилых контейнеров</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="missions.html" class="header_a">Наша миссия</a></li>
+                    <li><a href="partners.html" class="header_a">Партнеры</a></li>
+                    <li><a href="projects.html" class="header_a">Проекты</a> </li>
+                    <li><a href="news.html" class="header_a">Блог</a></li>
+                    <li><a href="contacts.html" class="header_a">Контакты</a></li>
+                </ul>
+            </div>
+            </div>
+        </header>
+        <section class="building page">
+    <div class="building_img"></div>
+    
+</section>
+<!-- slider -->
+    <section class="slider">
+        <div class="container">
+               	<div class="services-list">
+               		               			<div class="service-item">
+               			<div class="company_title hr">СТРОИТЕЛЬСТВО ЗДАНИИ И СООРУЖЕНИИ</div>
+		                <div class="company_subtitle mb_100"><p><strong>ЖИЛАЯ НЕДВИЖИМОСТЬ</strong><br>
+Реализация уникальных многосекционных монолитно-каркасных комплексов разной высотности с прилегающей инфраструктурой: многоуровневые паркинги, наземные отапливаемые автостоянки, школы, детские сады, игровые площадки.<br>
+Возведение зданий с индивидуальной архитектурой с использованием современных строительных технологий и безопасных материалов.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</strong><br>
+Строительство бизнес-центров, административно-офисных зданий, торгово-развлекательных комплексов, логистических центров, складских и производственных помещений.Проекты компании &laquo;West Development Company&raquo; отличаются масштабностью и комплексным подходом к их реализации, отвечая концепции ориентиров в современном строительстве.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>РЕКОНСТРУКЦИЯ СООРУЖЕНИЙ</strong><br>
+Реконструкция зданий специализированных складов, торговых и оптовых баз, объектов материально-технического снабжения, хранилищ.<br>
+В выполнение организационно-строительных задач входит изменение функционального назначения ранее построенных объектов согласно корректировке проектно-сметной документации, расширение площади помещений за счет пристроек или надстроек, улучшение строительно-бытовых показателей.</p>
+</div>
+
+		                <div class="new new_1">
+
+		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_0" data-src="/img/services/82b57f4d1bb9d6f2be4c465cc620e364.jpg">
+				                            <img class="slider_img" src="../img/services/82b57f4d1bb9d6f2be4c465cc620e364.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_0" data-src="/img/services/79fe309365cd7cc4479447ce1baa994b.jpg">
+				                            <img class="slider_img" src="../img/services/79fe309365cd7cc4479447ce1baa994b.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_0" data-src="/img/services/5d90703ba869765edca810fefa5af177.jpg">
+				                            <img class="slider_img" src="../img/services/5d90703ba869765edca810fefa5af177.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_0" data-src="/img/services/be2a13824b860a95277f1de5f904af61.jpg">
+				                            <img class="slider_img" src="../img/services/be2a13824b860a95277f1de5f904af61.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                		                    </div>
+	                    <div class="new_control new_control_1"></div>
+               		</div>
+               		               			<div class="service-item">
+               			<div class="company_title hr">ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</div>
+		                <div class="company_subtitle mb_100"><p>Качество электромонтажных работ зависит от профессионализма их исполнителя. Специалисты нашей компании обладают опытом и знаниями того, как подключить объект к электрической сети, провести проводку, установить приборы и сделать электрообеспечение безопасным, долговечным и комфортным.</p>
+
+<p>&nbsp;</p>
+
+<p>Специализация деятельности сотрудников широкая, поэтому в одном лице заказчик получает исполнителя всех видов электромонтажа. Компания предлагает электромонтаж в Алматы для частных лиц и организаций &laquo;с нуля&raquo;, после ремонта или перепланировки с учетом современных требований энергообеспечения объекта.</p>
+</div>
+
+		                <div class="new new_1">
+
+		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_1" data-src="/img/services/ce8eefae52227a0b682a766b1065440e.jpg">
+				                            <img class="slider_img" src="../img/services/ce8eefae52227a0b682a766b1065440e.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_1" data-src="/img/services/2ecc17140bea9b29f57f20c2292b79d3.jpeg">
+				                            <img class="slider_img" src="../img/services/2ecc17140bea9b29f57f20c2292b79d3.jpeg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_1" data-src="/img/services/0bc470de699a4788317cc124eb636df7.jpg">
+				                            <img class="slider_img" src="../img/services/0bc470de699a4788317cc124eb636df7.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_1" data-src="/img/services/348104a421fb7597c9508b1ee2ac91f7.jpg">
+				                            <img class="slider_img" src="../img/services/348104a421fb7597c9508b1ee2ac91f7.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_1" data-src="/img/services/d76b1ef45cdd6a8ef6d6cc19a59a80d1.jpg">
+				                            <img class="slider_img" src="../img/services/d76b1ef45cdd6a8ef6d6cc19a59a80d1.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                		                    </div>
+	                    <div class="new_control new_control_1"></div>
+               		</div>
+               		               			<div class="service-item">
+               			<div class="company_title hr">ПРОИЗВОДСТВО ЛЕГО-КИРПИЧА</div>
+		                <div class="company_subtitle mb_100"><p><strong>ЛЕГО КИРПИЧ</strong><br>
+Кирпичный завод &laquo;Авангард&raquo; производит и реализует в Атырау и Атырауской области лего-кирпич по заводским ценам. Продукция полностью соответствует всем требованиям ГОСТ и СНиП, обеспечивается гарантией производителя.До определенного времени казалось, что усовершенствовать работу каменщика просто невозможно, пока датчанин Оле Кирк не придумал делать кирпич наподобие конструктора Lego. Новая форма заметно упростила кладку стен, ведь теперь материалы легко и жестко соединялись друг с другом благодаря круглым выемкам.</p>
+
+<p>&nbsp;</p>
+
+<p>Технология изготовления и особенности конструкции лего-кирпича:<br>
+Главная особенность такого кладочного материала &mdash; это наличие двух выпуклостей сферической формы на монтажной поверхности, которые позволяют класть кирпич идеально ровно без подгонки. Стыковка элементов осуществляется с помощью клеевого раствора. Габариты материала 250 х 125 х 45/80 мм, вес варьируется в диапазоне 3,5&ndash;4 кг. Такое изделие отлично подходит для кладки несущих стен и перегородок.Лего-кирпич производят на специальном станке по определенной технологии. В качестве материалов изготовления используют различное сырье: глиняно-цементную смесь, составы на базе отсевов и цемента, а также глиняно-песчаную смесь.</p>
+
+<p>&nbsp;</p>
+
+<p>Технология производства лего-кирпича состоит из следующих этапов:</p>
+
+<p>приготовления сырья. Данная стадия включает сортировку и заготовку нужной смеси для последующей формовки. Для этого используется различное оборудование, которое позволяет размельчить и смешать компоненты в однородную массу;<br>
+формования и прессования. Состав подается в специальные матрицы, где производится сжатие смеси в соответствии с технологией производства;<br>
+получения готового лего-кирпича и выдержки на складе. Материал должен выдерживаться в складском помещении в течение 72 часов с момента изготовления.<br>
+Преимущества и область применения лего-кирпича<br>
+К достоинствам материала следует в первую очередь отнести упрощенный монтаж. Лего-кирпич сразу ложится ровно, как того и требует технология строительства стен. Это существенно снижает трудоемкость процесса и увеличивает скорость кладки.</p>
+
+<p>&nbsp;</p>
+
+<p>Также стоит отметить и такие преимущества:</p>
+
+<p>Идеально ровные и прочные стены. За счет наличия сферических выпуклостей и отверстий, элементы конструкции получают двойную фиксацию: специальное соединение и клеевой раствор.<br>
+Большие возможности для укладки коммуникаций внутри стен. Ровные сферические отверстия идеально подходят для прокладки проводов, труб небольшого диаметра и прочих инженерных сетей.<br>
+Высокую теплоизоляцию. Наличие отверстий повышает теплофизические характеристики лего-кирпича.<br>
+Презентабельный внешний вид, большой ассортимент цветовых оттенков.</p>
+</div>
+
+		                <div class="new new_1">
+
+		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_2" data-src="/img/services/c21972b4db00a667d32533d55a34ff58.jpg">
+				                            <img class="slider_img" src="../img/services/c21972b4db00a667d32533d55a34ff58.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_2" data-src="/img/services/30072aab169615c9c9ab0e23c0e42228.jpg">
+				                            <img class="slider_img" src="../img/services/30072aab169615c9c9ab0e23c0e42228.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_2" data-src="/img/services/ca028ee70567c6355e1624283eba0733.jpg">
+				                            <img class="slider_img" src="../img/services/ca028ee70567c6355e1624283eba0733.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                					                		<div>
+				                        <div class="slider_blog af" data-fancybox="project_2" data-src="/img/services/2c2c81e4e7127bccf290b9c44e921d10.jpg">
+				                            <img class="slider_img" src="../img/services/2c2c81e4e7127bccf290b9c44e921d10.jpg" alt="">
+				                        </div>
+				                    </div>
+				                		                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                	
+		                				                		                    </div>
+	                    <div class="new_control new_control_1"></div>
+               		</div>
+               		               		
+               	</div>
+            	
+
+
+
+
+               
+            </div>
+    </section>		<section class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <a href="../index.htm" class="footer_blog">
+                    <img src="../img/logo_footer.svg" alt="logo" class="logo_1">
+                </a>
+                <div class="footer_blog">
+                    <ul class="footer_menu">
+                        <div class="footer_submenu">
+                        <li><a href="../index.htm">Главная</a></li>
+                        <li><a href="../about.html">О компании</a></li>
+                        <li><a href="" class="menu_const">Услуги</a>
+                            <div class="ub_menu pt_link">
+                                <div class="ub_menu_list">
+                                    <a href="../construction.html" class="ub_link">Общестроительные работы </a>
+                                    <a href="../equipments.html" class="ub_link">Аренда и поставка спецтехники </a>
+                                    <a href="../manufacturers.html" class="ub_link">Изготовление офисных и жилых контейнеров</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../missions.html">Наша миссия</a></li>
+                        </div>
+                        <div class="footer_submenu">
+                        <li><a href="../partners.html">Партнеры</a></li>
+                        <li><a href="../projects.html">Проекты</a></li>
+                        <li><a href="../news.html">Блог</a></li>
+                        <li><a href="../contacts.html">Контакты</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer_blog">
+                    <div class="footer_title">Рассылка</div>
+                    <form action="#" class="form bot-form">
+                        <input type="email" required="" placeholder="Напишите адрес почты">
+                        <button class="submit">Подписаться</button>
+                    </form>
+                    <div class="soc-ul">
+                        <a class="soc_link facebook" href="#"></a>
+                        <a class="soc_link in" href="#"></a>
+                        <a class="soc_link insta" href="#"></a>
+                    </div>    
+                </div>
+            </div>
+            <div class="footer_title text"> Авторское право © 2020 Все права защищены</div>
+        </div>
+    </section>
+    <a href="#up" class="pageup">
+        <img src="../img/scrool.svg" alt="up">
+    </a>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/script.js?v=1.1152"></script>
+    <script type="text/javascript">
+        function logoWidth(){
+            var logo_w = $('#logo_main').width();
+            var logo_h = $('#logo_main').height();
+
+            $('#canvas').width(logo_w);
+            $('#canvas').height(logo_h);
+
+            $('#animation_container').width(logo_w);
+            $('#animation_container').height(logo_h);
+
+            $('#dom_overlay_container').width(logo_w);
+            $('#dom_overlay_container').height(logo_h);
+        }
+        logoWidth();
+        $(document).ready(function(){
+            logoWidth();
+        });
+        $(window).on("load", function(){
+            logoWidth();
+        });
+    </script>
+    </body>
+</html>
