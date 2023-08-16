@@ -165,7 +165,7 @@
     </script>
 </head>
 
-<body class="ru" onload="init();">
+<body class="en" onload="init();">
     <div class="alert  ">
         <div class="container">
 
@@ -195,7 +195,7 @@
                             bottom: 0;
                         }
                     </style>
-                    <a class="logo" style="position:relative" id="logo_main" href="../index.htm">
+                    <a class="logo" style="position:relative" id="logo_main" href="../index.html">
                         <div id="animation_container"
                             style="background-color:rgba(255, 255, 255, 1.00); width:260px; height:64px">
                             <canvas id="canvas" width="260" height="64"
@@ -208,18 +208,18 @@
                     </a>
                     <div class="header_right">
                         <div class="header_number dn">
-                            <p class="header_number_name">Телефон</p>
+                            <p class="header_number_name">Phone</p>
                             <p> <a href="tel:+77122755750">8 (7122) 755-750</a></p>
                         </div>
                         <div class="header_number dn">
-                            <p class="header_number_name">Эл.почта</p>
+                            <p class="header_number_name">E-mail</p>
                             <p> <a href="mailto:info@wdc.kz">info@wdc.kz</a></p>
                         </div>
                         <div class="header_number">
-                            <p class="header_number_name">Язык</p>
+                            <p class="header_number_name">Language</p>
                             <div class="lang_other">
-                                <a href="../en/contacts.html" class="lang ">EN</a> <span>/</span>
-                                <a href="contacts.html" class="lang active">RU</a>
+                                <a href="index.html" class="lang active">EN</a> <span>/</span>
+                                <a href="../ru/index.html" class="lang ">RU</a>
                             </div>
                         </div>
                     </div>
@@ -236,57 +236,223 @@
         <div class="header_subbottom">
             <div class="container">
                 <ul class="header_ul">
-                    <li><a href="index.htm" class="header_a">Главная</a></li>
-                    <li><a href="about.html" class="header_a">О компании</a></li>
-                    <li class="header_li"><a href="javascript:;" class="header_a  menu_const">Услуги<div
+                    <li><a href="index.htm" class="header_a">Main</a></li>
+                    <li><a href="about.html" class="header_a">Company</a></li>
+                    <li class="header_li"><a href="javascript:;" class="header_a  menu_const">Services<div
                                 class="menu_arrow"></div></a>
                         <div class="sub_menu">
                             <div class="sub_menu_list">
-                                <a href="construction.html" class="sub_link">Общестроительные работы</a>
-                                <a href="equipments.html" class="sub_link">Аренда и поставка спецтехники</a>
-                                <a href="manufacturers.html" class="sub_link">Изготовление офисных и жилых
-                                    контейнеров</a>
+                                <a href="construction.html" class="sub_link">Civil Construction</a>
+                                <a href="equipments.html" class="sub_link">Rental and sell of special equipment</a>
+                                <a href="manufacturers.html" class="sub_link">Manufacturer of container office &
+                                    homes</a>
                             </div>
                         </div>
                     </li>
-                    <li><a href="missions.html" class="header_a">Наша миссия</a></li>
-                    <li><a href="partners.html" class="header_a">Партнеры</a></li>
-                    <li><a href="projects.html" class="header_a">Проекты</a> </li>
-                    <li><a href="news.html" class="header_a">Блог</a></li>
-                    <li><a href="contacts.html" class="header_a">Контакты</a></li>
+                    <li><a href="missions.html" class="header_a">Our mission</a></li>
+                    <li><a href="partners.html" class="header_a">Partners</a></li>
+                    <li><a href="projects.html" class="header_a">Projects</a> </li>
+                    <li><a href="news.html" class="header_a">Blog</a></li>
+                    <li><a href="contacts.html" class="header_a">Contacts</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <section class="page_section page">
-        <div class="blog_img_cont"></div>
-        <div class="container">
-            <div class="title page_title">Контакты</div>
-
-            <div class="text_block blog_inner_text contact_list">
-                <div class="loc">21B, K.Satpayev Ave., Atyrau, 060000, Republic of Kazakhstan</div>
-                <a class="contact_link" href="tel:+77172755750">Tel.:+7 7172 755 750</a>
-                <a class="contact_link" href="mailto:info@wdc.kz">Email: info@wdc.kz</a>
-            </div>
-            <div class="contact_map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d678.9290858564801!2d51.890221867909986!3d47.10463119465148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a3eb2d7b8da61f%3A0x9b37e81204eaa04b!2z0KLQntCeICJXZXN0IERldmVsb3BtZW50IENvbXBhbnki!5e0!3m2!1sru!2skz!4v1645080156618!5m2!1sru!2skz"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <form class="contact_form_block" action="/pages/send" method="POST">
-                <div class="form_title">Отправить сообщения</div>
-                <div class="contact_form">
-                    <div class="input_block">
-                        <input class="form_input" type="text" name="name" placeholder="имя..." required="">
-                        <input class="form_input" type="email" name="email" placeholder="адрес электронной почты..."
-                            required="">
-                        <input class="form_input" type="text" name="title" placeholder="тема сообщения..." required="">
-                    </div>
-                    <textarea class="form_input form_area" placeholder="текст сообщения..." name="message"
-                        required=""></textarea>
+    <section class=" page">
+        <div class="wrapper main_slider">
+            <div>
+                <div class="photo_blog">
+                    <img src="../img/slide1.jpg" alt="" class="photo_img">
+                    <a href="../equipments.html" class="photo_bc">Rental and sell of special equipment</a>
                 </div>
-                <button class="form_btn" type="submit">Отправить</button>
-            </form>
+            </div>
+
+            <div>
+                <div class="photo_blog">
+                    <img src="../img/slide2.jpg" alt="" class="photo_img">
+                    <a href="../construction.html" class="photo_bc">Civil Construction</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="photo_blog">
+                    <img src="../img/slide3.jpg" alt="" class="photo_img">
+                    <a href="../manufacturers.html" class="photo_bc">Manufacturer of container office & homes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3 страница -->
+    <section class="welcome">
+        <div class="container">
+            <h3 class="welcome_title title">Welcome</h3>
+        </div>
+        <div class="welcome_wrapper">
+            <div class="container">
+                <div class="welcome_blog">
+                    <div class="welcome_subtitle">
+                        LLP &quot;West Development Company&quot; was founded in 2013 and specializes in the rental of
+                        special equipment and the supply of residential and office containers, as well as various
+                        materials and equipment. Extensive experience of working with major manufacturers from countries
+                        such as Holland, South Korea, Russia, Slovakia, Romania and China allow us to offer a wide range
+                        of materials and equipment for projects of any complexity and scale.
+                    </div>
+                    <a href="../about.html" class="welcome_btn">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 4 страница -->
+    <section class="blog">
+        <div class="container">
+            <h3 class="blog_title title">Blog</h3>
+            <div class="blog_wrapper">
+                <div class="blog_blog">
+                    <a class="blog_blog_img"
+                        href="../news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html">
+                        <img src="../img/news/3e4b12cd22986972d244bad42bcc15a8.jpg"
+                            alt="  A plant for the production of buses and special equipment will open in the Karaganda region"
+                            class="blog_img">
+                    </a>
+                    <a class="welcome_subtitle blog_subtitle"
+                        href="../news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html">
+                        A plant for the production of buses and special equipment will open in the Karaganda region</a>
+                    <a class="welcome_btn blog_btn"
+                        href="../news/zavod_po_proizvodstvu_avtobusov_i_spetstekhniki_otkroyut_v_karagandinskoyi_oblasti.html">Read
+                        more</a>
+                </div>
+                <div class="blog_blog">
+                    <a class="blog_blog_img"
+                        href="../news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html">
+                        <img src="../img/news/93e8a25543533e6c8bae01309274161e.jpg"
+                            alt="  More than 1,169 units of special equipment are involved in snow removal in the capital"
+                            class="blog_img">
+                    </a>
+                    <a class="welcome_subtitle blog_subtitle"
+                        href="../news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html">
+                        More than 1,169 units of special equipment are involved in snow removal in the capital</a>
+                    <a class="welcome_btn blog_btn"
+                        href="../news/v_uborke_snega_v_stolitse_zadeyistvovano_bolee_1_169_edinits_spetstekhniki.html">Read
+                        more</a>
+                </div>
+                <div class="blog_blog">
+                    <a class="blog_blog_img" href="../news/spetstekhnika_v_lizing_drayiv.html">
+                        <img src="../img/news/04a3c4b4045fcf3884b54bc7d7d84313.png"
+                            alt="   Special equipment for leasing | Drive | SHACMAN (SHAANXI)" class="blog_img">
+                    </a>
+                    <a class="welcome_subtitle blog_subtitle" href="../news/spetstekhnika_v_lizing_drayiv.html"> Special
+                        equipment for leasing | Drive | SHACMAN (SHAANXI)</a>
+                    <a class="welcome_btn blog_btn" href="../news/spetstekhnika_v_lizing_drayiv.html">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5 страница -->
+    <section class="statistica">
+        <div class="container">
+            <div class="statistica_wrapper">
+                <div class="statistica_blog">
+                    <img src="../img/kamaz.svg" alt="" class="statistica_img">
+                    <div class="statistica_title cifra">225</div>
+                    <div class="statistica_subtitle">UNITS OF SPECIAL EQUIPMENT ON THE COMPANY BALANCE SHEET
+                    </div>
+                </div>
+                <div class="statistica_blog">
+                    <img src="../img/top.svg" alt="" class="statistica_img">
+                    <div class="statistica_title" id="thousand_num">1285</div>
+                    <div class="statistica_subtitle">UNITS OF RESIDENTIAL AND OFFICE CONTAINERS MANUFACTURED</div>
+                </div>
+                <div class="statistica_blog">
+                    <img src="../img/build.svg" alt="" class="statistica_img">
+                    <div class="statistica_title cifra">27</div>
+                    <div class="statistica_subtitle">PERMANENT TECHNICIANS 24/7 WORKING IN STATE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- карусель -->
+    <section class="carousel">
+        <div class="container">
+            <h3 class="carousel_title title">Our Clients</h3>
+            <div class="partners">
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/69afcfc1503df1d6fed14b90f5a34885.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/73ff6e7aa9de55ace7b16d62533c0f11.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/47b62f5152306401cfef930084e87f37.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/c55eb0694b5d6f4507281da170a6938f.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/ddc7735c4dfd82d9eb566a5c2eb60a8d.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="container">
+            <h3 class="carousel_title title">Partners</h3>
+            <div class="partners">
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/69afcfc1503df1d6fed14b90f5a34885.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/73ff6e7aa9de55ace7b16d62533c0f11.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/47b62f5152306401cfef930084e87f37.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/c55eb0694b5d6f4507281da170a6938f.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="carousel_wrapper">
+                        <!-- <div class="carousel_blog"> -->
+                        <img src="../img/partners/ddc7735c4dfd82d9eb566a5c2eb60a8d.png" alt="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="footer">
@@ -298,42 +464,43 @@
                 <div class="footer_blog">
                     <ul class="footer_menu">
                         <div class="footer_submenu">
-                            <li><a href="../index.htm">Главная</a></li>
-                            <li><a href="../about.html">О компании</a></li>
-                            <li><a href="" class="menu_const">Услуги</a>
+                            <li><a href="../index.htm">Main</a></li>
+                            <li><a href="../about.html">Company</a></li>
+                            <li><a href="" class="menu_const">Services</a>
                                 <div class="ub_menu pt_link">
                                     <div class="ub_menu_list">
-                                        <a href="../construction.html" class="ub_link">Общестроительные работы </a>
-                                        <a href="../equipments.html" class="ub_link">Аренда и поставка спецтехники </a>
-                                        <a href="../manufacturers.html" class="ub_link">Изготовление офисных и жилых
-                                            контейнеров</a>
+                                        <a href="../construction.html" class="ub_link">Civil Construction </a>
+                                        <a href="../equipments.html" class="ub_link">Rental and sell of special
+                                            equipment </a>
+                                        <a href="../manufacturers.html" class="ub_link">Manufacturer of container office
+                                            & homes</a>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="../missions.html">Наша миссия</a></li>
+                            <li><a href="../missions.html">Our mission</a></li>
                         </div>
                         <div class="footer_submenu">
-                            <li><a href="../partners.html">Партнеры</a></li>
-                            <li><a href="../projects.html">Проекты</a></li>
-                            <li><a href="../news.html">Блог</a></li>
-                            <li><a href="../contacts.html">Контакты</a></li>
+                            <li><a href="../partners.html">Partners</a></li>
+                            <li><a href="../projects.html">Projects</a></li>
+                            <li><a href="../news.html">Blog</a></li>
+                            <li><a href="../contacts.html">Contacts</a></li>
                         </div>
                     </ul>
                 </div>
                 <div class="footer_blog">
-                    <div class="footer_title">Рассылка</div>
+                    <div class="footer_title">Newsletter</div>
                     <form action="#" class="form bot-form">
-                        <input type="email" required="" placeholder="Напишите адрес почты">
-                        <button class="submit">Подписаться</button>
+                        <input type="email" required="" placeholder="Enter your e-mail">
+                        <button class="submit">Subscribe</button>
                     </form>
                     <div class="soc-ul">
                         <a class="soc_link facebook" href="#"></a>
                         <a class="soc_link in" href="#"></a>
-                        <a class="soc_link insta" href="#"></a>
+                        <a class="soc_link insta" href="index.htm#2ііі"></a>
                     </div>
                 </div>
             </div>
-            <div class="footer_title text"> Авторское право © 2020 Все права защищены</div>
+            <div class="footer_title text"> Copyright 2020 All Rights Reserved</div>
         </div>
     </section>
     <a href="#up" class="pageup">
