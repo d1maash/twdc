@@ -359,6 +359,16 @@
 .blog_blog {
     border: 1px solid #d1c2c2;
     padding: 7px 7px;
+    -webkit-box-shadow: 10px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 10px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 10px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: all 1s ease;
+}
+
+.blog_blog:hover {
+    -webkit-box-shadow: -16px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -16px 6px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: -16px 6px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .blog_btn {
